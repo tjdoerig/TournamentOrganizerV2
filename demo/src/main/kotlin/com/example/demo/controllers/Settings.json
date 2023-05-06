@@ -1,0 +1,10 @@
+{
+  "ftp": [
+    {
+      "host": "fcappenzell.ch",
+      "user": "gruempeli",
+      "port": "21",
+      "password": "IVirE3oitQnu7KFxAP36erF7R6G61oa88U5a80xV"
+    }
+  ]
+}
