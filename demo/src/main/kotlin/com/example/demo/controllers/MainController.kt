@@ -32,17 +32,6 @@ open class MainController {
     @FXML
     private var pnlSettings: Pane? = null
 
-    val sceneLayout = fxmlLoader.load<Pane>()
-    val sceneController = fxmlLoader.getController<SceneController>()
-
-    sceneController.setNavigationCallback { fxmlFile ->
-        navigateToScene(fxmlFile)
-    }
-
-    mainScene = Scene(sceneLayout)
-    primaryStage.scene = mainScene
-}
-
 class SceneController {
     private lateinit var navigationCallback: (String) -> Unit
 
