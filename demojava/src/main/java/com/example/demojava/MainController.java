@@ -1,5 +1,7 @@
 package com.example.demojava;
 
+import com.example.demojava.dao.database.SQLiteDBCreator;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,6 +18,7 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
 
         try {
             Parent fxml = FXMLLoader.load(getClass().getResource("home.fxml"));
@@ -49,6 +52,18 @@ public class MainController implements Initializable {
         contentArea.getChildren().removeAll();
         contentArea.getChildren().setAll(fxml);
 
+    }
+    public void newDataBase(ActionEvent actionEvent) {
+        SQLiteDBCreator dbCreator = new SQLiteDBCreator();
+
+        // Call the createDatabase() method to create a new database
+        SQLiteDBCreator.createDatabase();
+    }
+
+    public void openDataBase(ActionEvent actionEvent) {
+    }
+
+    public void closeDataBase(ActionEvent actionEvent) {
     }
 
 

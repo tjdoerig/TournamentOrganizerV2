@@ -4,7 +4,8 @@ module com.example.demojava {
             
         requires org.controlsfx.controls;
                         requires org.kordamp.bootstrapfx.core;
-            
+    requires java.sql;
+
     opens com.example.demojava to javafx.fxml;
     exports com.example.demojava;
     exports com.example.demojava.controllers;
